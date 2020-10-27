@@ -34,17 +34,13 @@ function Header() {
             </li>
           )}
           <li>
-            <a href="#opensource">Open Source</a>
+            <a href="#opensource">Projects I have worked on</a>
           </li>
+         
           <li>
-            <a href="#achievements">Achievements</a>
+            <a href="#blogs">Startup Projects</a>
           </li>
-          <li>
-            <a href="#blogs">Blogs</a>
-          </li>
-          <li>
-            <a href="#talks">Talks</a>
-          </li>
+         
           <li>
             <a href="#contact">Contact Me</a>
           </li>

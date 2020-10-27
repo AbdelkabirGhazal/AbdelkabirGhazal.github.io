@@ -7,23 +7,23 @@ import emoji from "react-easy-emoji";
 
 const greeting = {
   /* Your Summary And Greeting Section */
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
-  subTitle: emoji("A passionate Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."),
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+  username: "Ghazal Abdelkabir",
+  title: "Hello, world! I'm Abdelkabir Ghazal",
+  subTitle: emoji("A passionate Software Developer having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / Flutter /Python / PHP and some other cool libraries and frameworks."),
+  resumeLink: ""
 };
 
 // Your Social Media Link
 
 const socialMediaLinks = {
 
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta"
+  github: "https://github.com/AbdelkabirGhazal",
+  linkedin: "https://www.linkedin.com/in/abdelkabirghazal/",
+  gmail: "abdelkabirghazal@gmail.com",
+  gitlab: "https://gitlab.com/abdelkabirghazal",
+  facebook: "https://web.facebook.com/abdelkabir.ghazal/",
+  medium: "",
+  stackoverflow: "https://stackoverflow.com/users/11622913/abdelkabir-ghazal"
   // Instagram and Twitter are also supported in the links!
 };
 
@@ -31,11 +31,10 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What i do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji("⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji("⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean")
+    emoji("⚡ Integration of third party services such as Firebase/ Parse server")
   ],
 
 /* Make Sure You include correct Font Awesome Classname to view your icon
@@ -51,10 +50,6 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
@@ -65,10 +60,6 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
     },
     {
       skillName: "npm",
@@ -91,8 +82,20 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git"
+    },
+
+    {
+      skillName: "Bootstrap",
+      fontAwesomeClassname: "fab fa-bootstrap"
+    },
+
+  
+  
+    {
+      skillName: "PHP",
+      fontAwesomeClassname: "fab fa-php"
     }
   ]
 };
@@ -153,29 +156,26 @@ const workExperiences = {
   viewExperiences: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      role: "Unity and C#",
+      company: "Intellcap",
+      companylogo: require("./assets/images/logo_intellcap.png"),
+      date: "June 2018 – Aug 2020",
+      desc: "Contributing to a 3D interactive climate science game for kids using Unity and C#.",
+
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Python and matplotlib",
+      company: "Exploroc",
+      companylogo: require("./assets/images/exploroc.png"),
+      date: "Aug 2020 – Oct 2020",
+      desc: "Creating GUI app in Python that can visualize drillhole trace and plot it with matplotlib in 3D."
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Front End Developer",
+      company: "Intellcap",
+      companylogo: require("./assets/images/logo_intellcap.png"),
+      date: "June 2019 – Sep 2019",
+      desc: "Design and implementation of a web monitoring application for a smart building using Javascript and React js."
     },
   ]
 };
@@ -185,7 +185,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
-  githubUserName: "saadpasta", // Change to your github username to view your profile in Contact Section.
+  githubUserName: "abdelkabirghazal", // Change to your github username to view your profile in Contact Section.
   showGithubProfile :"true" // Set true or false to show Contact profile using Github, defaults to false
 };
 
@@ -253,14 +253,14 @@ const blogSection = {
 
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description: "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+      url: "https://play.google.com/store/apps/details?id=app.xprepa.x_prepa",
+      title: "X Prépa",
+      description: "It helps students to access alternative educational resources and be exposed to new forms of educational content."
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description: "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+      url: "http://concoursmedecine.ma/",
+      title: "ConcoursMedecine.Ma",
+      description: "Beautifully simple and powerful websites for students interested in the medical field, it containts all the resources they need to succeed their exams."
     }
   ]
 };
@@ -294,8 +294,8 @@ const podcastSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-3243454077",
-  email_address: "saadpasta70@gmail.com"
+  number: "",
+  email_address: "abdelkabirghazal@gmail.com"
 };
 
 //Twitter Section

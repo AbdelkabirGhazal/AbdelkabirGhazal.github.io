@@ -10,14 +10,15 @@ export default function Blogs() {
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="blogs">
         <div className="blog-header">
-          <h1 className="blog-header-text">{blogSection.title}</h1>
-          <p
+          <h1 style={{textAlign: 'center'}} className="blog-header-text">My Startup Projects :</h1>
+          <h3
             className={
-              isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
+              isDark ? "subtitle is-size-5-desktop" : "subtitle is-size-5-desktop"
             }
+            style={{textAlign: 'center'}}
           >
-            {blogSection.subtitle}
-          </p>
+            I'm a bit of a digital product junky. Over the years, I've used hundreds of web and mobile apps in different industries. Eventually, I decided that it would be a fun challenge to try designing and building my own.
+          </h3>
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">

@@ -15,79 +15,56 @@ export default function Projects() {
   const [repo, setrepo] = useState([]);
   const { isDark } = useContext(StyleConsumer);
   useEffect(() => {
-    getRepoData();
+   
   }, []);
 
-  function getRepoData() {
-    const client = new ApolloClient({
-      uri: "https://api.github.com/graphql",
-      request: (operation) => {
-        operation.setContext({
-          headers: {
-            authorization: `Bearer ${openSource.githubConvertedToken}`,
-          },
-        });
-      },
-    });
-
-    client
-      .query({
-        query: gql`
-        {
-        user(login: "${openSource.githubUserName}") {
-          pinnedItems(first: 6, types: [REPOSITORY]) {
-            totalCount
-            edges {
-              node {
-                ... on Repository {
-                  name
-                  description
-                  forkCount
-                  stargazers {
-                    totalCount
-                  }
-                  url
-                  id
-                  diskUsage
-                  primaryLanguage {
-                    name
-                    color
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-        `,
-      })
-      .then((result) => {
-        setrepoFunction(result.data.user.pinnedItems.edges);
-        console.log(result);
-      })
-      .catch(function (error) {
-        console.log(error);
-        setrepoFunction("Error");
-        console.log(
-          "Because of this Error, nothing is shown in place of Projects section. Projects section not configured"
-        );
-      });
-  }
-
-  function setrepoFunction(array) {
-    setrepo(array);
-  }
-  if (!(typeof repo === "string" || repo instanceof String)) {
+ var projets =[{ 
+  "name":"TIPE CPGE",
+  "size":7969, 
+  "desc":'I developed this project so that students can access alternative educational resources and be exposed to new forms of educational content.', 
+  "link":'https://play.google.com/store/apps/details?id=com.akgh.tipe_cpge', 
+  "languages":[{"name":"Java", "color":"#b07219"},{"name":"Firebase", "color":"#059BE5"},{"name":"Android Studio", "color":"green"},{"name":"Photoshop", "color":"blue"}],
+  "forkCount":123, 
+  "stargazers":1234, 
+ }, { 
+  "name":"X Prépa",
+  "size":17408, 
+  "desc":"'X Prépa' app is like 'TIPE CPGE' but with more general content and it's a native app that works on both Android and IOS platforms.", 
+  "link":'https://play.google.com/store/apps/details?id=app.xprepa.x_prepa', 
+  "languages":[{"name":"Dart", "color":"#00B4AB"},{"name":"Flutter", "color":"blue"},{"name":"Parse Server", "color":"grey"},{"name":"Google App Script", "color":"yellow"}],
+  "forkCount":123, 
+  "stargazers":1234, 
+ }, { 
+  "name":"Cinema Management System",
+  "size":51450, 
+  "desc":'A Cinema Management System is an all-in-one solution that can handle all ticket-related operations at the cinema such as Schedule showtimes and Manage Ticket Prices', 
+  "link":'', 
+  "languages":[{"name":"PHP", "color":"#4F5D95"},{"name":"Symfony ", "color":"black"},{"name":"OracleDB", "color":"red"},{"name":"Git", "color":"#3f2c00"}],
+  "forkCount":123, 
+  "stargazers":1234, 
+ }, { 
+  "name":"Concours Medecine",
+  "size":33980, 
+  "desc":"Beautifully simple and powerful websites for students interested in the medical field, it containts all the resources they need to succeed their exams.", 
+  "link":'http://concoursmedecine.ma/', 
+  "languages":[{"name":"PHP", "color":"#4F5D95"},{"name":"Bootstrap ", "color":"#7c14f7"},{"name":"MySql", "color":"#d67d36"},{"name":"PayPal SDKs", "color":"#blue"}],
+  "forkCount":123, 
+  "stargazers":1234, 
+ } ];
+  if (true) {
     return (
       <Suspense fallback={renderLoader()}>
         <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
+          <h1 style={{textAlign: 'center'}} className="project-title">Projects I have worked on :</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
-              return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
-              );
-            })}
+
+          <GithubRepoCard projects={projets[0]} languages={projets[0].languages} key={projets.name} isDark={isDark} />
+           <GithubRepoCard projects={projets[1]} languages={projets[1].languages} key={projets.name} isDark={isDark} />
+           
+           <GithubRepoCard projects={projets[2]} languages={projets[2].languages} key={projets.name} isDark={isDark} />
+           <GithubRepoCard projects={projets[3]} languages={projets[3].languages} key={projets.name} isDark={isDark} />
+           
+
           </div>
           <Button
             text={"More Projects"}

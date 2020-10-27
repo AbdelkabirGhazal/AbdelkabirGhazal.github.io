@@ -22,26 +22,7 @@ export default function Twitter() {
   const { isDark } = useContext(StyleContext);
 
   if (twitterDetails.userName) {
-    return (
-      <Suspense fallback={renderLoader()}>
-        <div class="tw-main-div" id="twitter">
-          <div className="centerContent">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName={twitterDetails.userName}
-              options={{ height: 400, width: { widthScreen } }}
-              placeholder={renderLoader()}
-              autoHeight={false}
-              borderColor="#fff"
-              key={isDark ? "1" : "2"}
-              theme={isDark ? "dark" : "light"}
-              noFooter={true}
-              onload={timeOut()}
-            />
-          </div>
-        </div>
-      </Suspense>
-    );
+    return null;
   } else {
     return null;
   }
